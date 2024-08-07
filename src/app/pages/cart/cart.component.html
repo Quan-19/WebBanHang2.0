@@ -1,0 +1,13 @@
+<div id="product-cart">
+  @for (product of this.storeService.cart; track $index) {
+    <div id="card">
+      <app-product-card [product]="product"></app-product-card>
+      <h2>Số lượng:{{ product.quantity }}</h2>
+      <button (click)="storeService.deletecart($index)">
+        Xóa khỏi giỏ hàng
+      </button>
+    </div>
+    <app-total-cost></app-total-cost>
+    <app-check-out></app-check-out>
+  }
+</div>

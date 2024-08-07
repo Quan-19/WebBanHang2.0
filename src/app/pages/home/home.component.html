@@ -1,0 +1,32 @@
+<div id="container">
+  <div id="content-container">
+    <div id="container-left">
+      <div id="category">
+        <h3>Danh mục</h3>
+        <p>Nhà cửa-Đời sống</p>
+        <p>Điện thoại-Máy tính</p>
+        <p>Đồ chơi-Mẹ & Bé</p>
+        <p>Thời trang-Nước hoa</p>
+        <p>Điện gia dụng</p>
+        <p>Thể thao-Du lịch</p>
+        <p>Ô tô-Xe máy</p>
+        <p>Thú cưng-Sách</p>
+        <p>Thực phẩm</p>
+        <p>Thời trang nam</p>
+        <p>Thời trang nữ</p>
+        <p>Khác...</p>
+      </div>
+    </div>
+    <div id="container-center">
+      @for (product of this.storeService.products; track $index) {
+        <div id="card">
+          <app-product-card
+            [routerLink]="['/product', product.id]"
+            [product]="product"
+          ></app-product-card>
+        </div>
+      }
+    </div>
+    <div id="container-right"></div>
+  </div>
+</div>

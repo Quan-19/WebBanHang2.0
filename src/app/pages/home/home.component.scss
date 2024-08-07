@@ -1,0 +1,49 @@
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100% - 80px);
+}
+
+#content-container {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  height: 90%;
+  border-radius: 10px;
+}
+
+#container-left {
+  width: 15%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 10px;
+}
+
+#container-center {
+  display: flex;
+  width: 80%;
+  height: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+#card {
+  display: flex;
+  margin: 10px;
+  width: 200px;
+  height: 350px;
+  background-color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+
+#category {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}

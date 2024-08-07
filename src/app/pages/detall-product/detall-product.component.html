@@ -1,0 +1,29 @@
+<h1>Đây là chi tiết sản phẩm</h1>
+
+<div id="container">
+  <div id="content-container">
+    <div id="left-content">
+      <img src="{{ detailProduct?.image }}" alt="Ảnh sản phẩm" />
+      <h1 id="name-product">Tên sản phẩm:{{ detailProduct?.name }}</h1>
+
+      <p>{{ detailProduct?.description }}</p>
+    </div>
+    <div id="middle-content">
+      <div class="middle-content-top">
+        <h2>Đặt điểm nổi bật</h2>
+        <p>{{ detailProduct?.outstanding }}</p>
+        <p>{{ detailProduct?.outstanding1 }}</p>
+        <p>{{ detailProduct?.outstanding2 }}</p>
+      </div>
+      <!--      <div class="middle-content-mid"></div>-->
+      <!--      <div class="middle-content-bot"></div>-->
+    </div>
+    <div id="right-content">
+      <h2>Giá:{{ detailProduct?.price }}VND</h2>
+      <app-total-cost></app-total-cost>
+      <button (click)="storeService.addToCart(detailProduct)">
+        Thêm vào giỏ hàng
+      </button>
+    </div>
+  </div>
+</div>
